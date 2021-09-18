@@ -9,8 +9,12 @@ window.addEventListener("load", ()=>{
     let animate = document.querySelectorAll("ul.slider li");
     let menus = document.querySelectorAll("ul.menu li a");
     let sections =document.querySelectorAll("section");
-    let backgrounds = document.querySelectorAll(".bg")
-    console.log(backgrounds);
+    let backgroundOne = document.querySelector("div.intro");
+    let backgroundTwo = document.querySelector("div.services");
+    let backgroundThree = document.querySelector("div.about");
+    let backgroundFour = document.querySelector("div.contact");
+    let aboutSection =document.getElementById("about");
+    let servicesSection = document.getElementById("services")
     buttonOne.addEventListener("click",function(){
             console.log("click");
             animate.forEach(anim => anim.classList.add("animate"));
@@ -69,16 +73,47 @@ window.addEventListener("load", ()=>{
         })
     })
     
-    // window.addEventListener("scroll",()=>{
-    //     sections.forEach((sec)=>{
-    //          curr = sec.getAttribute("id");
-    //     })
-    //     backgrounds.forEach((background)=>{
-    //         let value = window.scrollY;
-    //         if(background.classList.contains(curr)){
-    //             background.style.backgroundPositionY=-value *0.5 + "px";
-    //         }
-           
-    //     })
-    // })
+    window.addEventListener("scroll",function(){
+        let value =window.scrollY;
+        console.log(value);
+        backgroundOne.style.backgroundPositionY= "-" + value * 0.2 + "px";
+        backgroundTwo.style.backgroundPositionY= "-" + value * 0.2 + "px";
+        let aboutValue = window.scrollY - aboutSection.offsetTop;
+        backgroundThree.style.backgroundPositionY= "-" + aboutValue * 0.3 + "px";
+        backgroundFour.style.backgroundPositionY= "-" + aboutValue * 0.2+ "px";
+    })
+    let menuIcon = document.querySelector("ul.menu-icon");
+    let menuTiles = document.querySelectorAll("ul.menu-icon li");
+    let menuBar = document.querySelector("ul.menu-bar");
+    let menunav = document.querySelectorAll("ul.menu-bar li a")
+    console.log(menuBar);
+
+    menuIcon.addEventListener("click",()=>{
+        menuTiles.forEach((tile)=>{
+            tile.classList.toggle("active");
+        })
+        menuBar.classList.toggle("active");
+    })
+    menunav.forEach((nav)=>{
+        nav.addEventListener("click",function() {
+            menunav.forEach(na => na.classList.remove("active"))
+            this.classList.add("active");
+        })
+    })
+    window.addEventListener("scroll",function(){
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - sectionHeight/3.5){
+            current = section.getAttribute("id");
+          }
+        })
+        menunav.forEach((element)=>{
+            element.classList.remove("active");
+            if(element.classList.contains(current)){
+                element.classList.add("active");
+            }
+        })
+    })
 })

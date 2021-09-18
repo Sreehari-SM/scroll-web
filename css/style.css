@@ -11,7 +11,6 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box; 
     user-select: none; 
-
 }
 html{
     scroll-behavior: smooth;
@@ -81,7 +80,7 @@ section#intro div.intro-left {
 
 section#intro div.intro-left header { 
     width: 50%;
-    background-color: #444444;
+    background-color: #333;
     padding: 3% 3%;
     position: fixed;
     left: 0;
@@ -111,6 +110,93 @@ section#intro div.intro-left header ul.menu li a:hover{
     color: #66ac66;
     transition: 0.3s ease-in-out;
 }
+section#intro div.intro-left header ul.menu-icon{
+    width: 10%;
+    height: 60px;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    background: #444444;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+section#intro div.intro-left header ul.menu-icon li{
+    height: 5px;
+    width: 50%;
+    margin-bottom: 5px;
+    background-color: #000;
+    transition-duration: 0.6s;
+}
+section#intro div.intro-left header ul.menu-icon li.active:first-child{
+    transform: rotate(-45deg);
+    background: #66ac66;
+    margin-bottom: 0;
+    position: absolute;
+    transition: 0.6s;
+}
+section#intro div.intro-left header ul.menu-icon li.active:last-child{
+    transform: rotate(45deg);
+    background: #66ac66;
+    margin-bottom: 0;
+    position: absolute;
+    transition: 0.6s;
+}
+section#intro div.intro-left header ul.menu-icon li.active:nth-child(2){
+    display: none;
+    background: #66ac66;
+    transition: 0.6s;
+}
+section#intro div.intro-left header ul.menu-icon li:last-child{
+    margin-bottom: 0;
+}
+
+section#intro div.intro-left header ul.menu-bar{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    top: -100%;
+    text-align: center;
+    transition-duration: 0.6s;
+}
+section#intro div.intro-left header ul.menu-bar.active{
+    top: 0;
+    transition: 0.6s;
+}
+section#intro div.intro-left header ul.menu-bar li{
+    margin-bottom: 10px;
+}
+section#intro div.intro-left header ul.menu-bar li:last-child{
+    margin-bottom: 0;
+}
+section#intro div.intro-left header ul.menu-bar li a { 
+    font-size: 18px;
+    font-weight: bold;
+    color: #979797;
+    transition-duration: 0.3s;
+}
+section#intro div.intro-left header ul.menu-bar li a.active{
+    color:#66ac66;
+}
+section#intro div.intro-left header ul.menu-bar li a:hover{
+    color: #66ac66;
+    transition: 0.3s ease-in-out;
+}
+/* section#intro div.intro-left header div.logo{
+    width: 45%;
+    display: none;
+}
+section#intro div.intro-left header div.logo img{
+    width: 100%;
+} */
 
 section#intro div.intro-left div.intro-main { 
     padding: 25% 5% 25% 10%;
@@ -168,7 +254,7 @@ section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right 
     height: 5px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
 }
 section#intro div.intro-left div.intro-main a.button{
     display: inline-block;
@@ -189,7 +275,7 @@ section#intro div.intro-right {
     width: 50%;
     background-image: url(../img/vertex-bg-01.jpg);
     background-repeat: no-repeat;
-    background-size: 65% 100%;
+    background-size: 65% 1100px;
     background-position: right 0;
     background-attachment: fixed;
 }
@@ -247,7 +333,7 @@ section#services div.services-left hr {
     height: 5px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
 }
 
 section#services div.services-left div.services-left-bottom { 
@@ -282,14 +368,14 @@ section#services div.services-right {
     width: 50%;
     background-image: url(../img/vertex-bg-02.jpg);
     background-repeat: no-repeat;
-    background-size: 65% 100%;
+    background-size: 65% 1100px;
     background-position: right 0;
     background-attachment: fixed;
 }
 section#gallery { 
     width: 100%;
     height: 100%;
-    padding: 10% 0;
+    padding: 10% 0 5% 0;
     background-color: #333333;
 }
 
@@ -417,7 +503,7 @@ section#gallery div.slider-control button.active{
 #about .about-left { 
     width: 50%;
     background-color:  #333333;
-    padding: 5%;
+    padding: 5% 5% 10% 5%;
 }
 
 #about .about-left h3 { 
@@ -445,7 +531,7 @@ section#gallery div.slider-control button.active{
     height: 5px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
     margin-bottom: 30px;
 
 }
@@ -476,7 +562,7 @@ section#gallery div.slider-control button.active{
     width: 50%;
     background-image: url(../img/vertex-bg-03.jpg);
     background-repeat: no-repeat;
-    background-size: 65% 100%;
+    background-size: 65% 1100px;
     background-position: right 0;
     background-attachment: fixed;
 }
@@ -568,7 +654,7 @@ section#contact div.contact-left form.input-section textarea#message:focus{
 }
 
 section#contact div.contact-left p.footer { 
-    font-size: 16px;
+    font-size: 12px;
     color:#656565 ;
     margin-bottom: 40px;
 }
@@ -577,7 +663,7 @@ section#contact div.contact-right {
     width: 50%;
     background-image: url(../img/vertex-bg-04.jpg);
     background-repeat: no-repeat;
-    background-size: 65% 100%;
+    background-size: 65% 1100px;
     background-position: right 0;
     background-attachment: fixed;
     position: relative;
@@ -588,4 +674,197 @@ section#contact div.contact-right div.map {
     width: 40%;
     top: 20%;
     left: 0;
+}
+section#contact div.contact-right div.map iframe{
+    width: 500px;
+    height: 400px;
+}
+@media all and (max-width:1280px){
+    section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right h3{
+        max-width: 100%;
+    }
+    section#services div.services-left div.services-left-bottom ul{
+        justify-content: space-between;
+    }
+    #about .about-left .about-one{
+        max-width: 100%;
+    }
+    #about .about-left .about-two{
+        max-width: 100%;
+    }
+    #about .about-left .about-three{
+        max-width: 100%;
+    }
+    section#contact div.contact-left p.contact{
+        max-width: 90%;
+    }
+    section#contact div.contact-left form.input-section input[type="submit"]{
+        width: 30%;
+    }
+}
+@media all and (max-width:1080px){
+    section#services div.services-left div.services-left-bottom ul li p{
+        max-width: 100%;
+    }
+}
+@media all and (max-width:980px){
+    section#intro{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    section#intro div.intro-left header{
+        width: 100%;
+        top: 0;
+        padding: 5% ;
+        display: flex;
+    }
+    section#intro div.intro-left header div.icon{
+        display: block;
+    }
+    section#intro div.intro-left header ul.menu{
+        display: none;
+    }
+    section#intro div.intro-left header ul.menu-icon{
+        display: flex;
+    }
+    section#intro div.intro-left{
+        width: 100%;
+    }
+    section#intro div.intro-left div.intro-main{
+        width: 100%;
+    }
+    section#intro div.intro-right{
+        width: 100%;
+        height: 70vh;
+        background-position:center;
+        background-size: 100% 900px;
+    }
+    section#services{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    section#services div.services-left{
+        width: 100%;
+    }
+    section#services div.services-right{
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: 100% 1500px;
+    }
+    section#gallery div.gallery ul.slider li div.image div.popup{
+        padding: 5px;
+        font-size: 15px;
+    }
+    #about{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    #about .about-left{
+        width: 100%;
+    }
+    #about .about-right{
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: 100% 1000px;
+    }
+    section#contact{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    section#contact div.contact-left{
+        width: 100%;
+    }
+    section#contact div.contact-right{
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: 100% 1000px;
+    }
+    section#contact div.contact-right div.map{
+        width: 100%;
+        height: 50%;
+        top: 50%;
+    }
+    section#contact div.contact-right div.map iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media all and (max-width:768px){
+    section#gallery div.gallery ul.slider li{
+        width: 45%;
+    }
+    section#gallery div.gallery ul.slider li:nth-child(9){
+        margin-right: 0;
+    }
+    section#contact div.contact-left p.footer{
+        text-align: center;
+    }
+}
+@media all and (max-width:640px){
+    section#intro div.intro-left header{
+        padding: 15%;
+    }
+    section#intro div.intro-left header ul.menu-icon{
+        width: 15%;
+        height: 60px;
+    }
+    section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-left{
+        max-width: 40%;
+    }
+    section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right{
+        width: 57%;
+    }
+    section#intro div.intro-left div.intro-main{
+        padding-left: 5%;
+    }
+    div.wrapper{
+        width: 95%;
+    }
+    section#intro div.intro-left header ul.menu-bar.active{
+        padding-top: 10%;
+    }
+    section#intro div.intro-left header ul.menu-bar li{
+        margin-bottom: 20px;
+    }
+}
+@media all and (max-width:480px){
+    section#intro div.intro-left header ul.menu-icon{
+        width: 20%;
+    }
+    section#services div.services-left div.services-left-bottom ul{
+        flex-wrap: wrap;
+    }
+    section#services div.services-left div.services-left-bottom ul li{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    section#intro div.intro-left header ul.menu-bar{
+        width: 65%;
+    }
+    section#intro div.intro-left header ul.menu-bar.active{
+        top: 60px;
+    }
+    div.intro-left header ul.menu-bar.active {
+        padding: 10% 5%;
+    }
+    section#gallery div.gallery ul.slider li{
+        height: 170px;
+    }
+    section#gallery div.gallery ul.slider li div.image:hover{
+        transform: translateY(-170px);
+    }
+}
+@media all and (max-width:360px){
+    section#services div.services-left div.services-left-top {
+        padding: 20% 0;
+    }
+    section#contact div.contact-left p.contact{
+        max-width: 100%;
+    }
+}
+@media all and (max-width:320px){
+
 }
