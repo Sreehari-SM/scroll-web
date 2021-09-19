@@ -112,7 +112,7 @@ section#intro div.intro-left header ul.menu li a:hover{
 }
 section#intro div.intro-left header ul.menu-icon{
     width: 10%;
-    height: 60px;
+    height: 65px;
     padding: 10px 5px;
     justify-content: center;
     align-items: center;
@@ -178,7 +178,7 @@ section#intro div.intro-left header ul.menu-bar li:last-child{
     margin-bottom: 0;
 }
 section#intro div.intro-left header ul.menu-bar li a { 
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #979797;
     transition-duration: 0.3s;
@@ -190,13 +190,18 @@ section#intro div.intro-left header ul.menu-bar li a:hover{
     color: #66ac66;
     transition: 0.3s ease-in-out;
 }
-/* section#intro div.intro-left header div.logo{
-    width: 45%;
+section#intro div.intro-left header div.logo{
+    width: 25%;
+    position: absolute;
     display: none;
+    right: 2%;
+    top: 2%;
+   
 }
 section#intro div.intro-left header div.logo img{
+    display: block;
     width: 100%;
-} */
+}
 
 section#intro div.intro-left div.intro-main { 
     padding: 25% 5% 25% 10%;
@@ -715,10 +720,14 @@ section#contact div.contact-right div.map iframe{
     section#intro div.intro-left header{
         width: 100%;
         top: 0;
-        padding: 5% ;
+        padding: 10% ;
         display: flex;
     }
     section#intro div.intro-left header div.icon{
+        display: block;
+    }
+    section#intro div.intro-left header div.logo{
+        width: 20%;
         display: block;
     }
     section#intro div.intro-left header ul.menu{
@@ -765,7 +774,7 @@ section#contact div.contact-right div.map iframe{
     }
     #about .about-right{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background-position: center;
         background-size: 100% 1000px;
     }
@@ -778,7 +787,7 @@ section#contact div.contact-right div.map iframe{
     }
     section#contact div.contact-right{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background-position: center;
         background-size: 100% 1000px;
     }

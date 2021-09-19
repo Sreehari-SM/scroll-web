@@ -79,7 +79,7 @@ window.addEventListener("load", ()=>{
         backgroundOne.style.backgroundPositionY= "-" + value * 0.2 + "px";
         backgroundTwo.style.backgroundPositionY= "-" + value * 0.2 + "px";
         let aboutValue = window.scrollY - aboutSection.offsetTop;
-        backgroundThree.style.backgroundPositionY= "-" + aboutValue * 0.3 + "px";
+        backgroundThree.style.backgroundPositionY= "-" + aboutValue * 0.2 + "px";
         backgroundFour.style.backgroundPositionY= "-" + aboutValue * 0.2+ "px";
     })
     let menuIcon = document.querySelector("ul.menu-icon");
