@@ -256,10 +256,10 @@ section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right 
 }
 section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right hr{
     width: 100%;
-    height: 5px;
+    height: 8px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
+    box-shadow:  inset 0px 0px 2px 3px rgb(0 0 0 / 30%);
 }
 section#intro div.intro-left div.intro-main a.button{
     display: inline-block;
@@ -335,10 +335,10 @@ section#services div.services-left div.services-left-top a.button:hover{
 
 section#services div.services-left hr { 
     width: 60%;
-    height: 5px;
+    height: 8px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
+    box-shadow:  inset 0px 0px 2px 3px rgb(0 0 0 / 30%);
 }
 
 section#services div.services-left div.services-left-bottom { 
@@ -531,12 +531,12 @@ section#gallery div.slider-control button.active{
 }
 
 #about .about-left hr { 
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    height: 5px;
+    height: 8px;
     border-radius: 5px;
     color: #151515;
-    box-shadow: inset 0px 0px 0px 2px rgba(0,0,0,0.3);
+    box-shadow:  inset 0px 0px 2px 3px rgb(0 0 0 / 30%);
     margin-bottom: 30px;
 
 }
@@ -556,6 +556,7 @@ section#gallery div.slider-control button.active{
     border: 1px solid #656565;
     color: #656565;
     transition-duration: 0.5s;
+    position: relative;
 }
 #about .about-left .button:hover{
     border: 1px solid #66ac66;
@@ -614,7 +615,7 @@ section#contact div.contact-left form.input-section input[type="text"] {
     color: #fff;
 }
 section#contact div.contact-left form.input-section input[type="text"]:focus{
-    outline: 1px solid #fff;
+    outline: 1px solid lightblue;
 }
 section#contact div.contact-left form.input-section input[type="email"] { 
     width: 100%;
@@ -625,7 +626,7 @@ section#contact div.contact-left form.input-section input[type="email"] {
     color: #fff;
 }
 section#contact div.contact-left form.input-section input[type="email"]:focus{
-    outline: 1px solid #fff;
+    outline: 1px solid lightblue;
 }
 section#contact div.contact-left form.input-section input::placeholder{
     font-size: 16px;
@@ -655,7 +656,7 @@ section#contact div.contact-left form.input-section textarea#message {
     color: #fff;
 }
 section#contact div.contact-left form.input-section textarea#message:focus{
-    outline: 1px solid #fff;
+    outline: 1px solid lightblue;
 }
 
 section#contact div.contact-left p.footer { 
@@ -687,6 +688,9 @@ section#contact div.contact-right div.map iframe{
 @media all and (max-width:1280px){
     section#intro div.intro-left div.intro-main div.intro-cont div.intro-cont-right h3{
         max-width: 100%;
+    }
+    section#intro div.intro-left header{
+        width: 49%;
     }
     section#services div.services-left div.services-left-bottom ul{
         justify-content: space-between;
@@ -816,6 +820,9 @@ section#contact div.contact-right div.map iframe{
     section#intro div.intro-left header{
         padding: 15%;
     }
+    section#intro div.intro-right{
+        height: 80vh;
+    }
     section#intro div.intro-left header ul.menu-icon{
         width: 15%;
         height: 60px;
@@ -867,6 +874,9 @@ section#contact div.contact-right div.map iframe{
     }
 }
 @media all and (max-width:360px){
+    section#intro div.intro-right{
+        height: 85vh;
+    }
     section#services div.services-left div.services-left-top {
         padding: 20% 0;
     }
